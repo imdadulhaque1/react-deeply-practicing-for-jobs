@@ -1,6 +1,8 @@
 import React from 'react';
 import FirstComponent from './components/firstComponent';
 import MappingData from './components/mapping/MappingData';
+import PropsClassComp from './components/hooksUseState/PropsInClassCom';
+import UseState from './components/hooksUseState/UseState';
 import { BrowserRouter, Switch, Route, Redirect} from "react-router-dom";
 
 function App() {
@@ -12,11 +14,15 @@ function App() {
     <ul>
       <li>props</li>
       <li>mapping</li>
+      <li>propsclassc</li>
+      <li>usestate</li>
     </ul>
       <BrowserRouter>
         <Switch>
             <Route exact path="/props" component={FirstComponent} />
             <Route exact path="/mapping" component={MappingData} />
+            <Route exact path="/propsclassc" component={PropsClassComp} />
+            <Route exact path="/usestate" component={UseState} />
             <Redirect to="/" />
         </Switch>
       </BrowserRouter>
